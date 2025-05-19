@@ -1,0 +1,35 @@
+body {
+    margin-left: 150px;
+    margin-right : 150px;
+}
+
+.container {
+    margin: auto;
+    width: 50%;
+    background-color: rgb(97, 161, 216);
+    display: grid;
+    height: 300px;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.container > div {
+    background-color: white;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+}
+
+.item1{
+    align-self: start;
+}
+
+.item5{
+    align-self: center;
+}
+
+.item9{
+    align-self: end;
+}
