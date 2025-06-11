@@ -12,6 +12,7 @@
     @foreach ($situsweb as $s)
         <form action="/situsweb/updateweb" method="post">
             {{ csrf_field() }}
+            <input type="hidden" name="id" value="{{ $s->situsweb_id }}">
             <div class="row p-1 mb-1">
             <div class="col-2">
                 <label class="control-label">Nama Web </label>
@@ -33,7 +34,7 @@
                 <label class="control-label">Status Aktif </label>
             </div>
             <div class="col-6">
-                <input type="number" name="0/1" required="required" class="form-control" value="{{ $s->situsweb_aktif }}">
+                <input type="checkbox" name="aktif" value="1" {{ $s->situsweb_aktif == 1 ? 'checked' : '' }}>
             </div>
         </div>
         <div class="row p-1 mb-1">

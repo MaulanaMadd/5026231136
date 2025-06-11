@@ -12,6 +12,7 @@
     @foreach ($pegawai as $p)
         <form action="/pegawai/update" method="post">
             {{ csrf_field() }}
+            <input type="hidden" name="id" value="{{ $p->pegawai_id }}">
             <div class="row p-1 mb-1">
             <div class="col-2">
                 <label class="control-label">Nama </label>

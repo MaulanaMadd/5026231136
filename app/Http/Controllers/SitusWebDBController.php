@@ -28,7 +28,7 @@ public function storeweb(Request $request)
 	DB::table('situsweb')->insert([
 		'situsweb_nama' => $request->nama,
 		'situsweb_url' => $request->url,
-		'situsweb_aktif' => $request->aktif,
+		'situsweb_aktif' => $request->aktif ? 1 : 0,
 		'situsweb_uptime' => $request->uptime
 	]);
 	// alihkan halaman ke halaman pegawai
@@ -53,7 +53,7 @@ public function updateweb(Request $request)
 	DB::table('situsweb')->where('situsweb_id',$request->id)->update([
 		'situsweb_nama' => $request->nama,
 		'situsweb_url' => $request->url,
-		'situsweb_aktif' => $request->aktif,
+		'situsweb_aktif' => $request->aktif ? 1 : 0,
 		'situsweb_uptime' => $request->uptime
 	]);
 	// alihkan halaman ke halaman pegawai

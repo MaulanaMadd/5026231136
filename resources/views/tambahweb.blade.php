@@ -32,7 +32,7 @@
                 <label class="control-label">Status Aktif </label>
             </div>
             <div class="col-6">
-                <input type="number" name="0/1" required="required" class="form-control">
+                <input type="checkbox" name="aktif" value="1" {{ $s->situsweb_aktif == 1 ? 'checked' : '' }}>
             </div>
         </div>
         <div class="row p-1 mb-1">
