@@ -5,6 +5,7 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\SitusWebDBController;
 
 
 
@@ -79,3 +80,11 @@ Route::get('/pegawai/edit/{id}',[PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update',[PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
 Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
+
+Route::get('/situsweb', [SitusWebDBController::class, 'indexweb']);
+Route::get('/situsweb/tambahweb', [SitusWebDBController::class, 'tambahweb']);
+Route::post('/situsweb/storeweb', [SitusWebDBController::class, 'storeweb']); //jika form dikirim, route ini akan dijalankan
+Route::get('/situsweb/editweb/{id}',[SitusWebDBController::class, 'editweb']);
+Route::post('/situsweb/updateweb',[SitusWebDBController::class, 'updateweb']);
+Route::get('/situsweb/hapusweb/{id}', [SitusWebDBController::class, 'hapusweb']);
+Route::get('/situsweb/cariweb', [SitusWebDBController::class, 'cariweb']);
