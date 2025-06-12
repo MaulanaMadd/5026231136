@@ -28,13 +28,21 @@
             </div>
         </div>
         <div class="row p-1 mb-1">
-            <div class="col-2">
-                <label class="control-label">Status Aktif </label>
-            </div>
-            <div class="col-6">
-                <input type="checkbox" name="aktif" value="1" {{ $s->situsweb_aktif == 1 ? 'checked' : '' }}>
-            </div>
-        </div>
+    <div class="col-2">
+        <label class="control-label mb-0">Status Aktif</label>
+    </div>
+    <div class="col-6">
+        <!-- ensures "0" is sent when the box is left unchecked -->
+        <input type="hidden" name="aktif" value="0">
+
+        <input type="checkbox"
+               id="aktif"
+               name="aktif"
+               value="1"
+               {{ old('aktif') == 1 ? 'checked' : '' }}>
+        <label for="aktif" class="ms-1">Aktif</label>
+    </div>
+</div>
         <div class="row p-1 mb-1">
             <div class="col-2">
                 <label class="control-label">Uptime </label>

@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SitusWebDBController;
+use App\Http\Controllers\KaryawanDBController;
 
 
 
@@ -88,3 +89,9 @@ Route::get('/situsweb/editweb/{id}',[SitusWebDBController::class, 'editweb']);
 Route::post('/situsweb/updateweb',[SitusWebDBController::class, 'updateweb']);
 Route::get('/situsweb/hapusweb/{id}', [SitusWebDBController::class, 'hapusweb']);
 Route::get('/situsweb/cariweb', [SitusWebDBController::class, 'cariweb']);
+
+Route::get('/karyawan', [KaryawanDBController::class, 'indexkaryawan']);
+Route::get('/karyawan/tambahkaryawan', [KaryawanDBController::class, 'tambahkaryawan']);
+Route::post('/karyawan/storekaryawan', [KaryawanDBController::class, 'storekaryawan']); //jika form dikirim, route ini akan dijalankan
+Route::get('/karyawan/hapuskaryawan/{id}', [KaryawanDBController::class, 'hapuskaryawan']);
+Route::get('/karyawan/carikaryawan', [KaryawanDBController::class, 'carikaryawan']);
