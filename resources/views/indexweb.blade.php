@@ -24,7 +24,7 @@
             <tr>
                 <td>{{ $s->situsweb_nama }}</td>
                 <td>{{ $s->situsweb_url }}</td>
-                <td>{{ $s->situsweb_aktif }}</td>
+                <td>{{ $s->situsweb_aktif ? 'Aktif' : 'Tidak Aktif' }}</td>
                 <td>{{ $s->situsweb_uptime }}</td>
                 <td>
                     <a href="/situsweb/editweb/{{ $s->situsweb_id }}" class="btn btn-success">Edit</a>
