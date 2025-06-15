@@ -7,6 +7,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SitusWebDBController;
 use App\Http\Controllers\KaryawanDBController;
+use App\Http\Controllers\PageCounterDBController;
 
 
 
@@ -95,3 +96,5 @@ Route::get('/karyawan/tambahkaryawan', [KaryawanDBController::class, 'tambahkary
 Route::post('/karyawan/storekaryawan', [KaryawanDBController::class, 'storekaryawan']); //jika form dikirim, route ini akan dijalankan
 Route::get('/karyawan/hapuskaryawan/{id}', [KaryawanDBController::class, 'hapuskaryawan']);
 Route::get('/karyawan/carikaryawan', [KaryawanDBController::class, 'carikaryawan']);
+
+Route::get('/page', [PageCounterDBController::class, 'index']);

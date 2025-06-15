@@ -39,10 +39,10 @@
                 <a class="nav-link" href="#">EAS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 1</a>
+                <a class="nav-link" href="/page">Latihan 1</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 2</a>
+                <a class="nav-link" href="/karyawan">Latihan 2</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/karyawan">Latihan 3</a>
