@@ -8,6 +8,7 @@ use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SitusWebDBController;
 use App\Http\Controllers\KaryawanDBController;
 use App\Http\Controllers\PageCounterDBController;
+use App\Http\Controllers\NewKaryawanDBController;
 
 
 
@@ -98,3 +99,9 @@ Route::get('/karyawan/hapuskaryawan/{id}', [KaryawanDBController::class, 'hapusk
 Route::get('/karyawan/carikaryawan', [KaryawanDBController::class, 'carikaryawan']);
 
 Route::get('/page', [PageCounterDBController::class, 'index']);
+
+Route::get('/eas', [NewKaryawanDBController::class, 'indexnewkaryawan']);
+Route::get('/eas/tambahnewkaryawan', [NewKaryawanDBController::class, 'tambahnewkaryawan']);
+Route::post('/eas/storenewkaryawan', [NewKaryawanDBController::class, 'storenewkaryawan']); //jika form dikirim, route ini akan dijalankan
+Route::get('/eas/hapusnewkaryawan/{id}', [NewKaryawanDBController::class, 'hapusnewkaryawan']);
+// Route::get('/karyawan/carikaryawan', [KaryawanDBController::class, 'carikaryawan']);
